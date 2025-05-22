@@ -1,4 +1,4 @@
-Language: [🇬🇧](README.md)
+Language: [🇬🇧](README_EN.md)
 
 # 智核 – 智能代理操作系统
 
