@@ -41,6 +41,7 @@ AgentOS/
 │   │   │   └── error.rs           # AosError
 │   │   └── port/                  # 内核 port trait 定义（DIP 接口）
 │   │       ├── mod.rs
+│   │       ├── accelerator.rs     # Accelerator (GPU/NPU) 资源管理 trait
 │   │       ├── memory.rs          # FrameAllocator, PageMapper trait
 │   │       ├── interrupt.rs       # InterruptController trait
 │   │       ├── timer.rs           # Timer trait

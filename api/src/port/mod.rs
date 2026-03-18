@@ -3,6 +3,7 @@
 //! These traits define what the kernel needs from hardware.
 //! Concrete implementations live in the `hal` crate.
 
+pub mod accelerator;
 pub mod console;
 pub mod interrupt;
 pub mod memory;

@@ -14,4 +14,12 @@ pub struct ResourceBudget {
     pub cpu_time_limit: u64,
     /// CPU time used (nanoseconds).
     pub cpu_time_used: u64,
+    /// Accelerator (GPU/NPU) memory limit (bytes).
+    pub accel_mem_limit: usize,
+    /// Accelerator memory currently used (bytes).
+    pub accel_mem_used: usize,
+    /// Accelerator time budget (nanoseconds).
+    pub accel_time_limit: u64,
+    /// Accelerator time used (nanoseconds).
+    pub accel_time_used: u64,
 }

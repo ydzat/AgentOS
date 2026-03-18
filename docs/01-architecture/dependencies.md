@@ -55,6 +55,20 @@ AOS 不重复造轮子。Rust OS 开发生态已经提供了大量成熟的底�
 | Linux VFS | 虚拟文件系统抽象层接口设计 | `kernel/fs/vfs.rs` |
 | Linux ELF loader | ELF 可执行文件加载逻辑 | 用户态 Agent 加载 |
 | [OpenClaw](https://github.com/openclaw/openclaw) | Agent 间协作模式、技能注册、会话管理 | `kernel/ipc/`, AgentPack 设计 |
+| [virtio-drivers (rcore-os)](https://github.com/rcore-os/virtio-drivers) | `no_std` VirtIO 设备驱动（含 virtio-gpu），Rust OS 内核可用 | M5 QEMU 阶段的虚拟 GPU 支持 |
+| [Nova GPU Driver](https://rust-for-linux.com/nova-gpu-driver) | Linux 内核中的 Rust GPU 驱动，内核级 GPU 管理的真实案例 | M5 真实硬件阶段的 GPU 驱动架构参考 |
+
+### 加速器（GPU/NPU）生态说明
+
+以下项目**不适合直接用于内核**，但可作为用户态推理服务的技术选型参考：
+
+| 项目 | 说明 | 为什么不适合内核 |
+|------|------|----------------|
+| [wgpu](https://wgpu.rs/) / [wgpu-hal](https://crates.io/crates/wgpu-hal) | 跨平台 GPU 抽象 (Vulkan/Metal/DX) | 依赖 `std`，面向用户态 |
+| [Rust GPU](https://rust-gpu.github.io/) | 用 Rust 编写 GPU shader | GPU 端编程，不是资源管理 |
+| [CubeCL](https://crates.io/crates/cubecl-wgpu) | GPU 计算抽象框架 | 用户态计算框架 |
+
+AOS 内核的加速器抽象只管资源分配和调度（`api/src/port/accelerator.rs`），不涉及具体计算。实际的 CUDA/Vulkan/tilelang 调用在 `userspace/inference-server/` 中完成。
 
 ## 关键学习资源
 
