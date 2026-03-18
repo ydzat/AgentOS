@@ -178,6 +178,18 @@ AOS 天然适合机器人平台——Agent 即进程的设计让感知、规划�
 
 ---
 
+## 许可证
+
+AOS 采用分层许可模型：
+
+- **内核**（`api/`, `hal/`, `kernel/`, `init/`）— [GPL v2.0](LICENSE-GPL2)
+- **用户态服务**（`userspace/`, `examples/`, `tools/`）— [Apache 2.0](LICENSE-APACHE2)
+- **AgentPack 生态** — 开发者自选许可
+
+系统调用接口（AOS ABI）为许可边界。详见 [LICENSING.md](LICENSING.md)。
+
+---
+
 ## 项目状态
 
 > 🚧 早期设计阶段 — 欢迎参与讨论与贡献

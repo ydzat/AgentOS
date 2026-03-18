@@ -178,6 +178,18 @@ Multiple specialized Agents collaborate on cross-domain creative tasks (data ana
 
 ---
 
+## License
+
+AOS uses a layered licensing model:
+
+- **Kernel** (`api/`, `hal/`, `kernel/`, `init/`) — [GPL v2.0](LICENSE-GPL2)
+- **Userspace services** (`userspace/`, `examples/`, `tools/`) — [Apache 2.0](LICENSE-APACHE2)
+- **AgentPack ecosystem** — author's choice
+
+The syscall interface (AOS ABI) serves as the licensing boundary. See [LICENSING.md](LICENSING.md) for details.
+
+---
+
 ## Project Status
 
 > 🚧 Early design phase — discussion and contributions welcome
