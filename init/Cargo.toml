@@ -1,0 +1,11 @@
+[package]
+name = "aos-init"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-2.0-only"
+description = "AOS boot entry point — assembles hal into kernel and starts the first Agent"
+
+[dependencies]
+aos-api = { path = "../api" }
+aos-hal = { path = "../hal" }
+aos-kernel = { path = "../kernel" }

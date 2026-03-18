@@ -1,0 +1,14 @@
+[package]
+name = "aos-hal"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-2.0-only"
+description = "AOS hardware abstraction layer"
+
+[dependencies]
+aos-api = { path = "../api" }
+
+[features]
+default = ["arch-x86_64"]
+arch-x86_64 = []
+arch-aarch64 = []

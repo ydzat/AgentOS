@@ -1,0 +1,10 @@
+[package]
+name = "aos-kernel"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-2.0-only"
+description = "AOS kernel core — pure safe Rust"
+
+[dependencies]
+aos-api = { path = "../api" }
+# Note: does NOT depend on aos-hal (DIP)
