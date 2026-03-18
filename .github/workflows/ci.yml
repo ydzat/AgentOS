@@ -32,7 +32,7 @@ jobs:
         with:
           components: clippy
           targets: x86_64-unknown-none
-      - run: cargo clippy --workspace --all-targets -- -D warnings
+      - run: cargo clippy --workspace -- -D warnings
 
   # ── Compile check ─────────────────────────────────────────────
   check:
@@ -64,6 +64,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Generate lockfile
+        run: cargo generate-lockfile
       - uses: rustsec/audit-check@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

@@ -9,3 +9,9 @@ description = "AOS boot entry point — assembles hal into kernel and starts the
 aos-api = { path = "../api" }
 aos-hal = { path = "../hal" }
 aos-kernel = { path = "../kernel" }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"

@@ -1,1 +1,2 @@
-max-line-length = 100
+# Clippy configuration for AOS
+# Line length is enforced via rustfmt.toml (max_width = 100)

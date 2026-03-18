@@ -13,4 +13,10 @@
 #![warn(clippy::perf, clippy::style, clippy::complexity, clippy::pedantic)]
 #![warn(missing_docs)]
 
-// TODO: UEFI boot → hal init → kernel init → first Agent
+use core::panic::PanicInfo;
+
+/// Panic handler — required for no_std binaries.
+#[panic_handler]
+fn panic(_info: &PanicInfo) -> ! {
+    loop {}
+}
