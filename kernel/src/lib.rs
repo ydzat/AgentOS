@@ -11,11 +11,11 @@
 #![warn(missing_docs)]
 
 pub mod agent;
-pub mod ipc;
-pub mod capability;
 pub mod budget;
-pub mod memory;
-pub mod human;
-pub mod fs;
+pub mod capability;
 pub mod event;
+pub mod fs;
+pub mod human;
+pub mod ipc;
+pub mod memory;
 pub mod syscall;

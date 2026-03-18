@@ -10,6 +10,6 @@
 #![warn(missing_docs)]
 
 pub mod arch;
+pub mod console;
 pub mod mm;
 pub mod sync;
-pub mod console;

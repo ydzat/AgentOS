@@ -11,5 +11,5 @@
 #![warn(clippy::perf, clippy::style, clippy::complexity, clippy::pedantic)]
 #![warn(missing_docs)]
 
-pub mod uabi;
 pub mod port;
+pub mod uabi;
