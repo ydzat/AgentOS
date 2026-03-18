@@ -4,6 +4,10 @@
 //! Implements the port traits defined in `aos-api`.
 
 #![no_std]
+#![deny(warnings)]
+#![deny(clippy::correctness, clippy::suspicious)]
+#![warn(clippy::perf, clippy::style, clippy::complexity, clippy::pedantic)]
+#![warn(missing_docs)]
 
 pub mod arch;
 pub mod mm;

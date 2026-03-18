@@ -8,5 +8,9 @@
 
 #![no_std]
 #![no_main]
+#![deny(warnings)]
+#![deny(clippy::correctness, clippy::suspicious)]
+#![warn(clippy::perf, clippy::style, clippy::complexity, clippy::pedantic)]
+#![warn(missing_docs)]
 
 // TODO: UEFI boot → hal init → kernel init → first Agent
