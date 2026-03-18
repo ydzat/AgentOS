@@ -10,8 +10,3 @@ aos-api = { path = "../api" }
 aos-hal = { path = "../hal" }
 aos-kernel = { path = "../kernel" }
 
-[profile.dev]
-panic = "abort"
-
-[profile.release]
-panic = "abort"

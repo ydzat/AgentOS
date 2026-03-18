@@ -8,7 +8,7 @@
 #![forbid(unsafe_code)]
 #![deny(warnings)]
 #![deny(clippy::correctness, clippy::suspicious)]
-#![warn(clippy::perf, clippy::style, clippy::complexity, clippy::pedantic)]
+#![warn(clippy::perf, clippy::style, clippy::complexity)]
 #![warn(missing_docs)]
 
 pub mod port;

@@ -6,7 +6,7 @@
 pub enum AosError {
     /// Operation succeeded.
     Ok = 0,
-    /// AgentId does not exist.
+    /// `AgentId` does not exist.
     InvalidAgent = -1,
     /// Capability check failed.
     PermissionDenied = -2,
